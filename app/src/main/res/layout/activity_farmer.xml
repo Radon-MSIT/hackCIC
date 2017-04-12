@@ -41,7 +41,10 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:id="@+id/splocation"
+      android:entries="@array/districts"
       />
+
+
   <Button
       android:id="@+id/btnSubmit"
       android:text="Submit"

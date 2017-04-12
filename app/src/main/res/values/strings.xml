@@ -1,3 +1,10 @@
 <resources>
   <string name="app_name">CICHack</string>
+
+  <string-array name="districts">
+    <item>Alvar</item>
+    <item>Kanpur</item>
+    <item>Alahabad</item>
+  </string-array>
+
 </resources>

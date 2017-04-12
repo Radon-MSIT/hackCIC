@@ -13,15 +13,12 @@ import retrofit2.http.POST;
 
 public interface FarmerApi {
 
-  @FormUrlEncoded
   @GET(API.al)
   Call<CropStock> getAlResp();
 
-  @FormUrlEncoded
   @GET(API.ka)
   Call<CropStock> getKaResp();
 
-  @FormUrlEncoded
   @GET(API.alv)
   Call<CropStock> getAlvResp();
 }

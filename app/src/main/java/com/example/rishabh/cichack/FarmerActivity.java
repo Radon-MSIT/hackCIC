@@ -48,25 +48,26 @@ public class FarmerActivity extends AppCompatActivity {
   private void getCropInfo() {
     RetrofitUtil.ShowDialog(FarmerActivity.this);
 
-    Call<CropStock> call =null;
+    //Call<CropStock> call =null;
+    Call<CropStock> call =RetrofitUtil.RetrofitClient().getAlResp();
 
-    switch (splocation.getSelectedItem().toString()){
-
-      case "Alwar":
-        call=RetrofitUtil.RetrofitClient().getAlResp();
-        break;
-
-      case "kanpur":
-        call= RetrofitUtil.RetrofitClient().getKaResp();
-        break;
-
-      case  "Alahabad":
-        call= RetrofitUtil.RetrofitClient().getAlvResp();
-        break;
-      default:
-        call= RetrofitUtil.RetrofitClient().getAlResp();
-        break;
-    }
+    //switch (splocation.getSelectedItem().toString()){
+    //
+    //  case "Alwar":
+    //    call=RetrofitUtil.RetrofitClient().getAlResp();
+    //    break;
+    //
+    //  case "kanpur":
+    //    call= RetrofitUtil.RetrofitClient().getKaResp();
+    //    break;
+    //
+    //  case  "Alahabad":
+    //    call= RetrofitUtil.RetrofitClient().getAlvResp();
+    //    break;
+    //  default:
+    //    call= RetrofitUtil.RetrofitClient().getAlResp();
+    //    break;
+    //}
 
     //Executing Call
     call.enqueue(new Callback<CropStock>() {
@@ -74,7 +75,7 @@ public class FarmerActivity extends AppCompatActivity {
       public void onResponse(Call<CropStock> call, Response<CropStock> response) {
         RetrofitUtil.DismissDialog();
         try {
-          if (response.body().getStutus().equalsIgnoreCase("true")) {
+          if (response.body().getStutus().equalsIgnoreCase("OK")) {
 
 
           }
