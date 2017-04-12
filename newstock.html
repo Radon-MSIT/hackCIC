@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+<body>
+<div class="container">
+  <form id="contact" action="newstock.php" method="post">
+    <div class="bgimg"><h3 align="center">New Stock</h3>
+   </div>
+<br>
+   <br>
+   <fieldset>
+    <input id="sh" placeholder="Storage House" type="text" name="sh" tabindex="1" required autofocus>
+   </fieldset>
+    <fieldset>
+     <input id="crop" placeholder="Crop" type="text" name="crop" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input id="fname" placeholder="Farmer's Name" type="text" name="fname" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <fieldset>
+     <input id="qty" placeholder="Quantity (in Tons)" type="number" name="qty" tabindex="1" required autofocus>
+    </fieldset>
+      <fieldset>
+      <!-- <input id="doh" type="date" name="doh" tabindex="1" required autofocus> -->
+      <input placeholder="Date of Harvesting" class="textbox-n" type="text" onfocus="(this.type='date')"  id="date">
+ </fieldset>
+   <fieldset>
+  <!-- <input id="doe" type="date" name="doe" tabindex="1" required autofocus> -->
+   <input placeholder="Date of Expiry" class="textbox-n" type="text" onfocus="(this.type='date')"  id="date">
+</fieldset>
+
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+
+  </form>
+</div>
+
+	<p id="container"> hello </p>
+</body>
+</html>
