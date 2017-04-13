@@ -1,5 +1,6 @@
 package com.example.rishabh.cichack.utils;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
@@ -8,11 +9,14 @@ import com.example.rishabh.cichack.R;
 import com.example.rishabh.cichack.retrofit.Datum;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.github.mikephil.charting.interfaces.datasets.IPieDataSet;
+import com.github.mikephil.charting.utils.ColorTemplate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +43,7 @@ public class CropDetailsActivity extends AppCompatActivity {
     cropThree = (TextView) findViewById(R.id.cropThree);
     cropThreeDetail = (TextView) findViewById(R.id.cropThreeDetail);
 
-    //PieChart mChart = (PieChart) findViewById(R.id.chart);
+    mChart = (PieChart) findViewById(R.id.chart);
 
     ArrayList<Datum> crops=getIntent().getParcelableArrayListExtra("crops");
 
@@ -69,7 +73,7 @@ public class CropDetailsActivity extends AppCompatActivity {
     //yvalues.add(new PieEntry(23f, 4));
     //yvalues.add(new PieEntry(17f, 5));
 
-    PieDataSet dataSet = new PieDataSet(yvalues, "Election Results");
+    PieDataSet dataSet = new PieDataSet(yvalues, "Areas");
 
     ArrayList<String> xVals = new ArrayList<String>();
 
@@ -84,6 +88,17 @@ public class CropDetailsActivity extends AppCompatActivity {
 
     PieData data = new PieData(dataSet);
 
+    data.setValueFormatter(new PercentFormatter());
+    mChart.setData(data);
+
+
+    dataSet.setColors(ColorTemplate.VORDIPLOM_COLORS);
+    mChart.setDrawHoleEnabled(true);
+    mChart.setTransparentCircleRadius(30f);
+    mChart.setHoleRadius(30f);
+
+    data.setValueTextSize(13f);
+    data.setValueTextColor(Color.DKGRAY);
 
   }
 }
