@@ -22,11 +22,12 @@
 
       $sql = "SELECT * FROM storagehouse";
     $result = $conn->query($sql);
-    echo "<strong>" . "<pre>" . "Storage House" . "    " . "Crop" . "    " . "Farmer Name" . "    " . "Quantity" . "    " . "Harvest Date" . "    " . "Expiry Date" . "</pre>" . "</strong>" ;
+    echo "<h4>" . "<strong>" . "<pre>" . "Storage House" . "\t" . "Crop" . "\t" . "Farmer Name" . "\t" . "Quantity" . "\t" . "Harvest Date" . "\t" . "Expiry Date" . "</spre>" . "</strong>" . "</h4>" . "<br>" . "<hr>" . "<br>" ;
     if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<pre>" .$row["StorageHouse"] . " " . $row["Crop"] . " " . $row["Farmer"] . " " . $row["Quantity"] . " " . $row["HarvestDate"] . " " . $row["ExpiryDate"] . "</pre>" ;
+        echo "<p>" . "<pre>" .$row["StorageHouse"] . "\t" . $row["Crop"] . "\t" . $row["Farmer"] . "\t\t" . $row["Quantity"] . "\t" ;
+        echo "\t" . $row["HarvestDate"] . "\t" . $row["ExpiryDate"] . "</pre>" . "</p>" ;
     }
 } else {
     echo "0 results";
