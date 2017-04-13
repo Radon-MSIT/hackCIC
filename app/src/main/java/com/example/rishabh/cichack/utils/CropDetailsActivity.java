@@ -6,8 +6,15 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import com.example.rishabh.cichack.R;
 import com.example.rishabh.cichack.retrofit.Datum;
+import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.interfaces.datasets.IPieDataSet;
 import java.util.ArrayList;
+import java.util.List;
 
 public class CropDetailsActivity extends AppCompatActivity {
 
@@ -32,6 +39,8 @@ public class CropDetailsActivity extends AppCompatActivity {
     cropThree = (TextView) findViewById(R.id.cropThree);
     cropThreeDetail = (TextView) findViewById(R.id.cropThreeDetail);
 
+    //PieChart mChart = (PieChart) findViewById(R.id.chart);
+
     ArrayList<Datum> crops=getIntent().getParcelableArrayListExtra("crops");
 
     region.setText("Region: "+regionresp);
@@ -46,6 +55,35 @@ public class CropDetailsActivity extends AppCompatActivity {
 
     cropThree.setText(crops.get(2).getCrop());
     cropThreeDetail.setText("Cost: "+crops.get(2).getCost()+"\nIrrigation: "+crops.get(2).getIrrigation()+"\nFertilizer: "+crops.get(2).getFertilizer()+"\nSeed Cost: "+crops.get(2).getFertilizer()+"\nArea: "+crops.get(2).getArea());
+
+
+    mChart.setUsePercentValues(true);
+
+    List<PieEntry> yvalues = new ArrayList<PieEntry>();
+    yvalues.add(new PieEntry(Float.valueOf(crops.get(0).getArea()), 0));
+    yvalues.add(new PieEntry(Float.valueOf(crops.get(1).getArea()), 1));
+    yvalues.add(new PieEntry(Float.valueOf(crops.get(2).getArea()), 2));
+    //yvalues.add(new PieEntry(15f, 1));
+    //yvalues.add(new PieEntry(12f, 2));
+    //yvalues.add(new PieEntry(25f, 3));
+    //yvalues.add(new PieEntry(23f, 4));
+    //yvalues.add(new PieEntry(17f, 5));
+
+    PieDataSet dataSet = new PieDataSet(yvalues, "Election Results");
+
+    ArrayList<String> xVals = new ArrayList<String>();
+
+    xVals.add(crops.get(0).getCrop());
+    xVals.add(crops.get(1).getCrop());
+    xVals.add(crops.get(2).getCrop());
+    //xVals.add("February");
+    //xVals.add("March");
+    //xVals.add("April");
+    //xVals.add("May");
+    //xVals.add("June");
+
+    PieData data = new PieData(dataSet);
+
 
   }
 }

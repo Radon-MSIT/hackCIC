@@ -33,7 +33,13 @@
           android:padding="12dp"
           >
 
-      <TextView
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="150dp" />
+
+        <TextView
           android:id="@+id/region"
           android:text="Region: "
           android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
