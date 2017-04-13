@@ -1,15 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_crop_details"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.rishabh.cichack.utils.CropDetailsActivity"
-    >
+<!--<ScrollView-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:id="@+id/activity_main"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context="com.example.rishabh.cichack.utils.CropDetailsActivity"-->
+    <!--&gt;-->
 
-</RelativeLayout>
+  <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:background="#888888"
+      >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:gravity="bottom"
+          android:padding="12dp"
+          >
+
+      <TextView
+          android:id="@+id/region"
+          android:text="Region: "
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          />
+
+
+      <TextView
+          android:id="@+id/cost"
+          android:text="TOTAL COST: "
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          />
+
+      <TextView
+          android:id="@+id/cropOne"
+          android:text="BAJRA "
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          />
+
+      <TextView
+          android:id="@+id/cropOneDetail"
+          android:text="somethin: asfa\nasdad: asdfa"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="12dp"
+          />
+
+      <TextView
+          android:id="@+id/cropTwo"
+          android:text="BAJRA "
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          />
+
+      <TextView
+          android:id="@+id/cropTwoDetail"
+          android:text="somethin: asfa\nasdad: asdfa"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="12dp"
+          />
+
+      <TextView
+          android:id="@+id/cropThree"
+          android:text="BAJRA "
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          />
+
+      <TextView
+          android:id="@+id/cropThreeDetail"
+          android:text="somethin: asfa\nasdad: asdfa"
+          android:layout_width="wrap_content"
+          android:layout_marginLeft="12dp"
+          android:layout_height="wrap_content"
+          />
+      </LinearLayout>
+    </android.support.v7.widget.CardView>
+  </LinearLayout>
+<!--</ScrollView>-->
+
+
+

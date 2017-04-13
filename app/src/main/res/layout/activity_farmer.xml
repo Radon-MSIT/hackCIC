@@ -10,10 +10,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg"
     tools:context="com.example.rishabh.cichack.FarmerActivity"
     >
 
   <android.support.design.widget.TextInputLayout
+      android:layout_marginRight="12dp"
+      android:layout_marginLeft="12dp"
+      android:layout_marginTop="64dp"
       android:layout_width="match_parent"
       android:layout_height="wrap_content">
 
@@ -26,6 +30,8 @@
   </android.support.design.widget.TextInputLayout>
 
   <android.support.design.widget.TextInputLayout
+      android:layout_marginRight="12dp"
+      android:layout_marginLeft="12dp"
       android:id="@+id/input_layout_password"
       android:layout_width="match_parent"
       android:layout_height="wrap_content">
@@ -38,16 +44,19 @@
 
   </android.support.design.widget.TextInputLayout>
   <Spinner
+      android:layout_marginRight="12dp"
+      android:layout_marginLeft="12dp"
+      android:layout_marginTop="12dp"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:id="@+id/splocation"
       android:entries="@array/districts"
       />
 
-
   <Button
       android:id="@+id/btnSubmit"
       android:text="Submit"
+      style="@style/BottomButtonStyle"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       />
