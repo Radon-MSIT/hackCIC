@@ -2,7 +2,7 @@
 
 ### What we have completed till now
 
-*We suggest you to please read the ReadMe again (Its more precise and descriptive now.) :)*
+*We suggest you to please read the ReadMe again (Its more precise and descriptive now.)* :simple_smile:
 
 
 We have partially prepared the front-end of the website that will be available in Storage Houses.
