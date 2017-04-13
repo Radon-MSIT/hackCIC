@@ -1,4 +1,4 @@
-# CIC Hackathon
+# AgriStock
 
 ## THEME
 Productivity
